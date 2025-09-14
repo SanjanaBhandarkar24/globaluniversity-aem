@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/globaluniversity" mode="merge"/>
+    <filter root="/content/globaluniversity" mode="merge"/>
+    <filter root="/content/dam/globaluniversity" mode="merge">
+        <exclude pattern="/content/dam/globaluniversity(/.*)?"/>
+        <include pattern="/content/dam/globaluniversity/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/globaluniversity/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/globaluniversity" mode="merge"/>
+</workspaceFilter>
