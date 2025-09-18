@@ -19,10 +19,12 @@ pipeline {
         }
 
         stage('Build AEM Project') {
-            steps {
-                sh 'mvn clean install'
-            }
+    steps {
+        dir('globaluniversity') {  // 👈 this must match your folder name!
+            sh 'mvn clean install'
         }
+    }
+}
 
         stage('Deploy to AEM Author') {
             steps {
