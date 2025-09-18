@@ -6,6 +6,10 @@ pipeline {
         AEM_USER = 'admin'
         AEM_PASSWORD = 'admin'
     }
+	tools {
+    maven 'Maven 3.9.11'  // 👈 Same name you used in UI
+}
+
 
     stages {
         stage('Checkout Code') {
@@ -14,11 +18,13 @@ pipeline {
             }
         }
 
-        stage('Build AEM Project') {
-            steps {
-                sh 'mvn clean install'
-            }
+       stage('Build AEM Project') {
+    steps {
+        dir('globaluniversity') {  // 👈 this must match your folder name!
+            sh 'mvn clean install'
         }
+    }
+}
 
         stage('Deploy to AEM Author') {
             steps {
