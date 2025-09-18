@@ -1,0 +1,8 @@
+<sly data-sly-use.hero="com.globaluniversity.aem.core.models.HeroModel"/>
+
+<div class="hero-banner" style="background-image: url('${hero.backgroundImage @ context='uri'}');">
+  <div class="hero-content">
+    <h1>${hero.title}</h1>
+    <p>${hero.description}</p>
+  </div>
+</div>
