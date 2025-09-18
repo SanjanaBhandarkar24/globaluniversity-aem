@@ -6,7 +6,9 @@ pipeline {
         AEM_USER = 'admin'
         AEM_PASSWORD = 'admin'
     }
-
+tools {
+    maven 'Maven 3.9.11'  // 👈 Same name you used in UI
+}
     stages {
         stage('Checkout Code') {
             steps {
