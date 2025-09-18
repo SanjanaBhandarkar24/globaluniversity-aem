@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy to AEM Author') {
             steps {
                 script {
-                    def pkg = 'all/target/globaluniversity-aem.all-1.0.0-SNAPSHOT.zip'
+                    def pkg = 'all/target/globaluniversity-aem/globaluniversity.all-1.0.0-SNAPSHOT.zip'
 
                     // Upload
                     sh """
