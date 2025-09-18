@@ -40,7 +40,7 @@ pipeline {
                     // Install
                     sh """
                     curl -u $AEM_USER:$AEM_PASSWORD \\
-                    $AEM_AUTHOR/crx/packmgr/service.jsp?cmd=install&name=globaluniversity-aem.all-1.0.0-SNAPSHOT.zip
+                    $AEM_AUTHOR/crx/packmgr/service.jsp?cmd=install&name=globaluniversity.all-1.0.0-SNAPSHOT.zip
                     """
                 }
             }
